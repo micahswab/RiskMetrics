@@ -6,20 +6,17 @@ Connection to GHData:
 
 
 System Description:
-# to-do
+to-do
 
 Development Environment:
 - Commit Process: Collaborators can commit freely. Please keep others in the loop.
 - Contributor Agreement: We are not accepting contributions from non-collaborators currently.
-# to-do
 
 Data Flow Diagram:
-# to-do
+to-do
 
 Database Schema:
-# to-do
-
-
+to-do
 
 Documents licensed under Creative Commons Attribution-ShareAlike 4.0 International Public License.
 
