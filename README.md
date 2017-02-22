@@ -11,10 +11,10 @@ Development Environment:
 - Contributor Agreement: We are not accepting contributions from non-collaborators currently.
 
 Data Flow Diagram:
-to-do
 
-Database Schema:
+Database Schema: 
 ![alt tag](1.PNG)
+
 
 
 Documents licensed under Creative Commons Attribution-ShareAlike 4.0 International Public License.
