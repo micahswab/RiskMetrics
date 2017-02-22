@@ -14,7 +14,8 @@ Data Flow Diagram:
 to-do
 
 Database Schema:
-to-do
+![alt tag](1.PNG)
+
 
 Documents licensed under Creative Commons Attribution-ShareAlike 4.0 International Public License.
 
