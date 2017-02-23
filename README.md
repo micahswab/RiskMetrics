@@ -5,7 +5,7 @@ GHRiskMetrics is a planned contribution to GHData that will provide metrics such
 ### Development Environment
 Development is being performed in Python.
 Project collaborators can commit freely. But please keep the other collaboarators in the loop for big changes.
-Non-collaborators interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (ktran@unomaha.edu)
+Non-collaborators interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (khtran@unomaha.edu)
 
 ### Database Schema
 
@@ -19,7 +19,7 @@ Non-collaborators interested in contributing should contact Micah (mswab@unomaha
 
 ### Data Flow Diagram
 
-![alt tag](DFD.png)
+![Data Flow Diagram](data_flow_diagram.png)
 
 ### License & Copyright Declarations
 
