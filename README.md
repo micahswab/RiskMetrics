@@ -7,12 +7,12 @@ Development is being performed in Python.
 Project collaborators can commit freely. But please keep the other collaboarators in the loop for big changes.
 Non-collaborators interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (ktran@unomaha.edu)
 
-
-Data Flow Diagram: n/a
-
-
 Database Schema: 
 ![alt tag](1.PNG)
+
+
+Data Flow Diagram:
+![alt tag](Capture.PNG)
 
 
 Documents licensed under Creative Commons Attribution-ShareAlike 4.0 International Public License.
