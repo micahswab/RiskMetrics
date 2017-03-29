@@ -23,8 +23,9 @@ This license scanner python script works only on Window environment
   
 3/ How to use it :
 
-  Double click it and a console will pop up and ask you to enter the json file you just entered from above. After a few second, there will be a json file
-  appear. That is the shorter version of json file above. 
+  Double click it and a console will pop up and ask you to enter the json file you just entered from above. Also, it will ask you to enter
+  the name to output. After a few second, there will be a json file appear right at where the license scanner python script is located.
+  That is the shorter version of json file above. 
   
   
   
