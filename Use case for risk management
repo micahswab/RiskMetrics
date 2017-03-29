@@ -1,0 +1,26 @@
+Title: Determine License and Vulnerability Information
+Primary Actor: Open source maintainer who wants to check License and Vulnerability Information of open source
+Goal in Context: The <^> is able to determine…
+Stakeholders: 	Person making request
+			Repo owners?
+			Community?
+			People who want metrics?
+Preconditions:	Relevant file/package name is submitted
+			Proper info is sent in
+Main Success Scenario: Have a shorter file of license
+Failed End Conditions: Didn’t get it…
+Trigger: What starts this? Uploads software pkg…
+
+Title: Determine License and Vulnerability Information
+Primary Actor: Who wants this?
+Goal in Context: The <^> is able to determine…
+Stakeholders: 	Person making request
+			Repo owners?
+			Community?
+			People who want metrics?
+Preconditions:	Relevant file/package name is submitted
+			Proper info is sent in
+Main Success Scenario: Got it!
+Failed End Conditions: Didn’t get it…
+Trigger: What starts this? Uploads software pkg…
+
