@@ -34,3 +34,6 @@ Source code licensed under MIT.
 Documents licensed under CC BY-SA 4.0.
 
 All work copyright © Micah Swab and Kiet Tran 2017.
+
+### License Scanner instructions :
+Go to the md file license scanner instruction. It will help you how to use it perfectly
