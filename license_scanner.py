@@ -7,6 +7,7 @@ from pprint import pprint
 
 user_input = raw_input("Please enter the package name output, which has to be matched with the name you put in the cmd ")
 directory = os.path.normpath("C:/scancode-toolkit-1.6.0")
+user_file = raw_input("Please enter the name of shorter version: ")
 for subdir, dirs, files in os.walk(directory):
     for file in files:
         if file.endswith(str(user_input).strip()):
@@ -50,5 +51,5 @@ data = {
 
 jsonData =json.dumps(data,indent = 2)
 
-with open('JSONData.json', 'w') as f:
+with open(user_file+'.json', 'w') as f:
     f.write(jsonData)
