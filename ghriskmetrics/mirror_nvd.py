@@ -1,22 +1,25 @@
-#!/usr/bin/python
+# SPDX-License-Identifier: MIT
 
 import requests
 import zlib
-import os
 
+from os import path, makedirs
 from datetime import datetime
 
 
 url = 'https://nvd.nist.gov/feeds/xml/cve/'
+par_dir = path.dirname(path.realpath(__file__))
+gpa_dir = path.dirname(par_dir)
+nvd_dir = str(gpa_dir) + '/nvd/'
 base_filename = 'nvdcve-2.0-'
-path = 'nvd/'
+
 start_year = 2002
 end_year = datetime.now().year
 
 print ('Updating local mirror of National Vulnerability Database.')
 
-if not os.path.exists(path):
-    os.makedirs(path)
+if not path.exists(nvd_dir):
+    makedirs(nvd_dir)
 
 for year in range(start_year, end_year + 1):
 
@@ -28,19 +31,19 @@ for year in range(start_year, end_year + 1):
 
 	lastDateModified = meta.text.split('\n')[0].strip()
 
-	if (os.path.exists(path + xml_filename) 
-		and os.path.exists( path + meta_filename)
-		and lastDateModified == open(path + meta_filename, 'rt')
+	if (path.exists(nvd_dir + xml_filename) 
+		and path.exists(nvd_dir + meta_filename)
+		and lastDateModified == open(nvd_dir + meta_filename, 'rt')
 			.read().split('\n')[0].strip()):
 		print ('Using cached version of %s' % xml_filename)
 	else:
 		print("Downloading %s" % meta_filename)
-		with open(path + meta_filename, 'wb') as fd:
+		with open(nvd_dir + meta_filename, 'wb') as fd:
 			for chunk in meta.iter_content(chunk_size=1024):
 				fd.write(chunk)
 		d = zlib.decompressobj(16+zlib.MAX_WBITS)
 		print("Downloading %s" % xml_filename)
-		with open(path + xml_filename, 'wb') as fd:
+		with open(nvd_dir + xml_filename, 'wb') as fd:
 			for chunk in gz.iter_content(chunk_size=1024):
 				fd.write(d.decompress(chunk))
 

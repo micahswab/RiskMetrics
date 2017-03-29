@@ -1,2 +1,7 @@
 # Local mirror of NVD
 nvd/
+
+
+# Caches
+.cache
+__pycache__

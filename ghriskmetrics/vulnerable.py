@@ -1,35 +1,36 @@
-#!/usr/bin/python
+# SPDX-License-Identifier: MIT
 
 import sys, getopt
 
+from os import path
 from datetime import datetime
 
+def search(args):		
 
-if len(sys.argv) < 4:
-	print ('usage: vulnerable.py vendor_name product_name version')
-	sys.exit(2)
+	part = 'a'
+	vendor = args[1]
+	product = args[2]
+	version = args[3]
+	update = '-'
+	edition = '-'
+	language = '-'
 
-part = 'a'
-vendor = sys.argv[1]
-product = sys.argv[2]
-version = sys.argv[3]
-update = '-'
-edition = '-'
-language = '-'
+	cpe = 'cpe:/a:' + vendor + ':' + product + ':' + version
 
-cpe = 'cpe:/a:' + vendor + ':' + product + ':' + version
+	par_dir = path.dirname(path.realpath(__file__))
+	gpa_dir = path.dirname(par_dir)
+	nvd_dir = str(gpa_dir) + '/nvd/'
+	filename = 'nvdcve-2.0-%d.xml'
 
-vulnerable = False
-start_year = 2002
-end_year = datetime.now().year
-
-filename = 'nvd/nvdcve-2.0-%d.xml'
-
-while not vulnerable:
+	start_year = 2002
+	end_year = datetime.now().year
+	
 	for year in range(start_year, end_year + 1):
-		with open(filename.replace('%d', str(year)), 'r') as nvd:
+		print ('searching %s' % filename.replace('%d', str(year)))
+		with open(nvd_dir + filename.replace('%d', str(year)), 'r') as nvd:
 			for line in nvd:
 				if cpe in line:
-					vulnerable = True
-					break
+					return True
+
+	return False
 
