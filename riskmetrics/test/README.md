@@ -1,1 +1,4 @@
-# Run 'pytest' to test (this may take up to a minute to complete)
+# Tests 
+* Run `pytest` (this should take about 20 seconds)
+
+Tests need additional mocks to reduce testing time.
