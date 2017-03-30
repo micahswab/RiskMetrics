@@ -1,7 +1,12 @@
 # Local mirror of NVD
 nvd/
 
+# nexB/scancode
+scancode-toolkit-1.6.0/
+
+# virtualenvs
+envs/
 
 # Caches
 .cache
-__pycache__
+__pycache__/

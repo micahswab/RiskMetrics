@@ -45,6 +45,8 @@ scancode = str(gpa_dir) + '/scancode-toolkit-1.6.0/scancode'
 
 run([scancode, '--format', 'json', path_to_pkg, 'info.json'])
 
+data_json = json.loads('{"results" : "none"}')
+
 directory = os.path.dirname(os.path.realpath(__file__))
 for subdir, dirs, files in os.walk(directory):
     for file in files:
@@ -52,7 +54,11 @@ for subdir, dirs, files in os.walk(directory):
             with open(os.path.join(subdir, file),'r') as f:
                 data_json = json.load(f)
 
-all_licenses =  data_json['results']
+all_licenses = data_json['results']
+
+if all_licenses == "none":
+    print ('Failed to scan package. Exiting.')
+    exit(1)
 
 count_empty_file = 0
 license_file =[]
@@ -82,6 +88,8 @@ data = {
 }
 
 jsonData = json.dumps(data, indent = 2)
+
+#os.remove('info.json')
 
 print ('\nResults:\n')
 print (jsonData)
