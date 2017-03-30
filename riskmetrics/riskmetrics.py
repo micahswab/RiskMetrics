@@ -89,7 +89,7 @@ data = {
 
 jsonData = json.dumps(data, indent = 2)
 
-#os.remove('info.json')
+os.remove('info.json')
 
 print ('\nResults:\n')
 print (jsonData)
