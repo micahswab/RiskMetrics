@@ -1,5 +1,15 @@
 ## System Description
-RiskMetrics provides risk management metrics for any given software package. It utilizes nexB's [scancode-toolkit](https://github.com/nexB/scancode-toolkit) to scan a software package's source code for license information. RiskMetrics also checks the provided software package’s [Common Platform Enumeration (CPE)](https://scap.nist.gov/specifications/cpe/) against the [National Vulnerability Database (NVD)](https://nvd.nist.gov). Presence in this database indicates a documented security vulnerability within the software package.
+RiskMetrics provides risk management metrics for any given software package. It utilizes nexB's [scancode-toolkit](https://github.com/nexB/scancode-toolkit) to scan a software package's source code for license information (i.e., how many files are licensed, what types of licenses are used, etc.). RiskMetrics also checks the provided software package’s [Common Platform Enumeration (CPE)](https://scap.nist.gov/specifications/cpe/) against the [National Vulnerability Database (NVD)](https://nvd.nist.gov). Presence in this database indicates a documented security vulnerability within the software package.
+
+### Use Case
+- _Title:_ Provide Risk Management Metrics on Software Package
+- _Primary Actor:_ Open Source Contemplator (someone interested in utilizing OSS)
+- _Goal in Context:_ Provide metrics for determination of risk in any given software package
+- _Stakeholders:_ Open Source Contemplator, Software Package Vendor
+- _Preconditions_ Software package is present in system
+- _Main Success Scenario:_ Software package is analyzed and results outputted
+- _Failed End Conditions:_ Software package fails to be analyzed
+- _Trigger:_ Executes ./start.sh and provides software package
 
 ## Dependencies
 * macOS Sierra (10.12.x)
@@ -21,32 +31,30 @@ RiskMetrics provides risk management metrics for any given software package. It 
 6. In RiskMetrics, run `./setup.sh`
 
 ## Usage
-0. Retrieve a package to analyze
+0. Retrieve a software package to analyze
 1. In RiskMetrics, run `./start.sh`
-2. You will be prompted to enter the absolute file path to the software package to be analyzed
+2. You will be prompted to enter the absolute file path to the software package
 3. You will be prompted for the software package's vendor
 4. You will be prompted for the software package's name
 5. You will be prompted for the software package's version
 6. The results will be displayed on the Terminal 
 
 ## Development Environment
-Development is currently being performed on macOS 10.12.3 and Windows 10 using Python 3.6.0.
-Non-collaborators interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (khtran@unomaha.edu)
+Development is currently being performed on macOS Sierra and Windows 10 using Python 2.7 and 3.6. See developement setup instructions in riskmetrics for more information on how to start developing.
 
-### Database Schema
-This section is intentionally empty as no generated data is currently being cached.
+Those interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (khtran@unomaha.edu).
 
 ### Data Flow Diagram
 
 ![Data Flow Diagram](DFDv2.png)
 
+### Database Schema
+This section is intentionally empty as no generated data is currently being cached.
+
 ### License & Copyright Declarations
 
-Source code licensed under MIT.
+RiskMetrics source code licensed under MIT.
 
 Documents licensed under CC BY-SA 4.0.
 
-All work copyright © Micah Swab and Kiet Tran 2017.
-
-### License Scanner instructions :
-Go to the md file instruction to use license scanner. It will help you how to use it perfectly
+All work copyright © Micah Swab, Kiet Tran 2017.
