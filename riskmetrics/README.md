@@ -1,18 +1,11 @@
-# Development Setup
-## Mac
-- Install brew from http://brew.sh
-- 'brew install python3'
-- Create virtualenv 'virtualenv env'
-- Activate virtualenv 'source env/bin/activate'
-- Install dependencies 'pip install -r requirements.txt'
-- Update local NVD 'python mirror_nvd.py'
-- Search for software package vulnerability 
-  'python vulnerable.py <vendor_name> <product_name> <version>'
+## Development Setup
+### Mac
 
-## Linux
-- Create virtualenv 'virtualenv env'
-- Activate virtualenv 'source env/bin/activate'
-- Install dependencies 'pip install -r requirements.txt'
-- Update local NVD 'python mirror_nvd.py'
-- Search for software package vulnerability 
-  'python vulnerable.py <vendor_name> <product_name> <version>'
+1. Install Python 3
+   1. Install [Homebrew](http://brew.sh)
+   2. In a Terminal, run `brew install python3`
+2. Install [virtualenv](https://virtualenv.pypa.io/en/stable/)
+3. Create a virtualenv `virtualenv env`
+4. Activate virtualenv `source env/bin/activate`
+5. Install python dependencies `pip install -r requirements.txt`
+
