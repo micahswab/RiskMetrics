@@ -4,11 +4,15 @@ This license scanner python script works only on Window environment
 
   Firstly, download this file and extract : https://github.com/nexB/scancode-toolkit/releases/download/v1.6.0/scancode-toolkit-1.6.0.zip
   Next step is to extract this file at your C drive. 
+  
   Next step is open your command prompt and type this command line :
   cd C:\scancode-toolkit-1.6.0 
-  ( The purpose of this step is to change directory in order to install scancode and the license scanner works only on this directory C:\scancode-toolkit-1.6.0)
+  
+  (The purpose of this step is to change directory in order to install scancode and the license scanner works only on this directory  
+  C:\scancode-toolkit-1.6.0)
   Next, type 
   scancode --help
+  
   The purpose of this step is to set up scancode.
   Nextly, type
   scancode --format json samples name.json
