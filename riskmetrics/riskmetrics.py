@@ -87,6 +87,13 @@ def main(argv):
 
 
 def item_generator(json_input, lookup_key):
+    """
+    Find key item in nested dictionary.
+
+    Args:
+        json_input (dict): Dictionary in which to find key.
+        lookup_key (str): The key to look for in the dictionary.
+    """
     if isinstance(json_input, dict):
         for k, v in json_input.iteritems():
             if k == lookup_key:
