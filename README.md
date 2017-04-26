@@ -12,26 +12,35 @@ RiskMetrics provides risk management metrics for any given github repository. It
 - _Trigger:_ Executes ./start.sh and provides software package
 
 ## Dependencies
-* macOS Sierra (10.12.x)
 * [Python 2.7.x](https://www.python.org/download/releases/2.7/)
-* [virtualenv](https://virtualenv.pypa.io/en/stable/)
-* [scancode-toolkit-1.6.0](https://github.com/nexB/scancode-toolkit) (this will be automatically installed on first-time usage)
+* [virtualenv 15.0.1+](https://virtualenv.pypa.io/en/stable/)
+* [scancode-toolkit-1.6.0](https://github.com/nexB/scancode-toolkit) (this will be automatically installed during usage)
 
 ## Installation
-### Mac
-0. Install [Python 2.7](https://www.python.org/download/releases/2.7/)
-2. Install [virtualenv](https://virtualenv.pypa.io/en/stable/)
-3. In a Terminal, set your working directory where you want to install RiskMetrics
-4. In that directory, run `git clone https://github.com/hacksmath/RiskMetrics.git`
+### Ubuntu 16.04.2+ (with at least 3 GB Ram)
+0. [Python 2.7](https://www.python.org/download/releases/2.7/) ships with Ubuntu 16
+1. Install [virtualenv 15.0.1+](https://virtualenv.pypa.io/en/stable/)
+   * `sudo apt install virtualenv`
+2. In a Terminal, set your working directory where you want to install RiskMetrics
+3. In that directory, run `git clone https://github.com/hacksmath/RiskMetrics.git`
+   * If git is not installed, intall git with `sudo apt install git` or manually download RiskMetrics
+4. Create a virtualenv to install python dependencies with `virtualenv env`
+5. Activate the virtualenv with `source env/bin/activate`
+6. Install python dependencies with pip `pip install -r requirements.txt`
+   * This will install [requests](http://docs.python-requests.org/en/master/) and [pytest](https://docs.pytest.org/en/latest/) in the virtualenv
 
 ## Usage
-1. In RiskMetrics, run `python riskmetrics.py <github-repo-url>`
+1. In the RiskMetrics directory, run `python riskmetrics/riskmetrics.py <github-repo-url>`
+   * ScanCode and the NVD will be automatically downloaded and configured as necessary.
 2. The results will be displayed on the Terminal 
 
 ## Development Environment
 Development is currently being performed on macOS Sierra and Windows 10 using Python 2.7. See developement setup instructions in riskmetrics for more information on how to start developing.
 
 Those interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (khtran@unomaha.edu).
+
+## Test Cases
+To execute unit tests, run command `pytest`
 
 ### Data Flow Diagram
 
