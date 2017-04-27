@@ -35,7 +35,7 @@ RiskMetrics provides risk management metrics for any given github repository. It
 2. The results will be displayed on the Terminal 
 
 ## Development Environment
-Development is currently being performed on macOS Sierra and Windows 10 using Python 2.7. See developement setup instructions in riskmetrics for more information on how to start developing.
+Development is currently being performed on macOS Sierra and Windows 10 using Python 2.7.
 
 Those interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (khtran@unomaha.edu).
 
