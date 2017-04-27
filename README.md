@@ -17,16 +17,17 @@ RiskMetrics provides risk management metrics for any given github repository. It
 * [scancode-toolkit-1.6.0](https://github.com/nexB/scancode-toolkit) (this will be automatically installed during usage)
 
 ## Installation
-### Ubuntu 16.04.2+ (with at least 3 GB Ram)
+### Ubuntu 16.04.2+ (with at least 2 GB Ram)
 0. [Python 2.7](https://www.python.org/download/releases/2.7/) ships with Ubuntu 16
 1. Install [virtualenv 15.0.1+](https://virtualenv.pypa.io/en/stable/)
    * `sudo apt install virtualenv`
 2. In a Terminal, set your working directory where you want to install RiskMetrics
 3. In that directory, run `git clone https://github.com/hacksmath/RiskMetrics.git`
    * If git is not installed, intall git with `sudo apt install git` or manually download RiskMetrics
-4. Create a virtualenv to install python dependencies with `virtualenv env`
-5. Activate the virtualenv with `source env/bin/activate`
-6. Install python dependencies with pip `pip install -r requirements.txt`
+4. Change directories to the newly downloaded RiskMetrics
+5. Create a virtualenv to install python dependencies with `virtualenv env`
+6. Activate the virtualenv with `source env/bin/activate`
+7. Install python dependencies with pip `pip install -r requirements.txt`
    * This will install [requests](http://docs.python-requests.org/en/master/) and [pytest](https://docs.pytest.org/en/latest/) in the virtualenv
 
 ## Usage
@@ -40,7 +41,7 @@ Development is currently being performed on macOS Sierra and Windows 10 using Py
 Those interested in contributing should contact Micah (mswab@unomaha.edu) or Kiet (khtran@unomaha.edu).
 
 ## Test Cases
-To execute unit tests, run command `pytest`
+To execute unit tests, run command `pytest` in the test directory.
 
 ### Data Flow Diagram
 
